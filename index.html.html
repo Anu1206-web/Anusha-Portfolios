@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d19">
+<title>Anusha Shaik | Data Scientist & AI Engineer</title>
+<meta name="description" content="Anusha Shaik – Data Scientist with 2.7 years of professional experience at HCLTech, specialising in machine learning, MLOps and AI engineering.">
+
+<style>
+:root {
+  --bg:#080d19;
+  --surface:#101a2c;
+  --surface2:#152139;
+  --text:#edf2ff;
+  --muted:#a3afc4;
+  --accent:#9b8cff;
+  --cyan:#42d9df;
+  --border:#283651;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:Inter,Arial,sans-serif;line-height:1.7;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,90%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(8,13,25,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  min-height:72px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.logo{font-size:22px;font-weight:800;color:var(--accent)}
+.nav-links{display:flex;gap:23px;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted)}
+.nav-links a:hover{color:var(--cyan)}
+.hero{
+  min-height:600px;display:flex;align-items:center;
+  padding:95px 0;
+  background:
+  radial-gradient(ellipse at 80% 30%,#5542a533,transparent 45%),
+  radial-gradient(ellipse at 10% 90%,#087d9530,transparent 45%);
+}
+.eyebrow{
+  color:var(--cyan);font-size:12px;font-weight:800;
+  letter-spacing:2px;text-transform:uppercase;
+}
+h1{font-size:clamp(43px,7vw,76px);line-height:1.12;margin:22px 0}
+.gradient{
+  background:linear-gradient(110deg,var(--accent),var(--cyan));
+  background-clip:text;-webkit-background-clip:text;color:transparent;
+}
+.hero p{color:var(--muted);max-width:710px;font-size:17px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-block;padding:12px 22px;
+  border-radius:9px;border:1px solid var(--border);
+  font-size:14px;font-weight:700;transition:.2s;
+}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:white}
+.btn:hover{transform:translateY(-3px);border-color:var(--cyan)}
+.quick-info{
+  display:flex;flex-wrap:wrap;gap:22px;
+  margin-top:30px;color:var(--muted);font-size:13px;
+}
+section{padding:85px 0}
+.section-heading{margin-bottom:35px}
+.section-heading h2{font-size:34px;margin:8px 0}
+.section-heading p{color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:15px;padding:27px;
+}
+.card h3{font-size:19px;margin-bottom:12px}
+.muted{color:var(--muted)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.stat{
+  background:var(--surface2);padding:20px;border-radius:12px;
+}
+.stat strong{display:block;font-size:25px;color:var(--cyan)}
+.stat span{font-size:12px;color:var(--muted)}
+.skills-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:17px;
+}
+.skill-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:13px;padding:21px;
+}
+.skill-card h3{font-size:16px;color:var(--cyan);margin-bottom:12px}
+.skill-card p{color:var(--muted);font-size:13px}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.project{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:15px;overflow:hidden;transition:.25s;
+}
+.project:hover{transform:translateY(-4px);border-color:var(--accent)}
+.project-banner{
+  height:145px;display:grid;place-items:center;font-size:55px;
+  background:linear-gradient(135deg,#28205b,#104453);
+}
+.project-body{padding:25px}
+.project-body h3{font-size:20px;margin-bottom:8px}
+.project-body p{color:var(--muted);font-size:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.tag{
+  background:#282548;color:#d0c9ff;
+  border-radius:30px;padding:4px 10px;font-size:11px;
+}
+.timeline{border-left:2px solid var(--accent);padding-left:27px}
+.timeline-item{position:relative;margin-bottom:35px}
+.timeline-item:before{
+  content:"";position:absolute;left:-34px;top:9px;
+  height:12px;width:12px;border-radius:50%;background:var(--cyan);
+}
+.timeline-item h3{font-size:19px}
+.timeline-item .date{color:var(--cyan);font-size:13px;font-weight:700}
+.timeline-item p{color:var(--muted);font-size:14px;margin-top:7px}
+.timeline-item ul{padding-left:20px;color:var(--muted);font-size:14px;margin-top:12px}
+.timeline-item li{margin-bottom:7px}
+.education-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.edu-card{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:23px}
+.edu-card h3{font-size:17px}
+.edu-card p{color:var(--muted);font-size:13px}
+.edu-date{color:var(--cyan)!important;margin:6px 0}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cert{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;padding:20px;
+}
+.cert h3{font-size:14px;margin-bottom:8px}
+.cert p{font-size:12px;color:var(--muted)}
+.contact-box{
+  text-align:center;padding:55px 25px;
+  background:linear-gradient(130deg,#1b1a40,#102e40);
+  border:1px solid var(--border);border-radius:18px;
+}
+.contact-box h2{font-size:32px;margin:12px 0}
+.contact-box p{color:var(--muted);margin:10px auto;max-width:600px}
+.contact-details{
+  display:flex;justify-content:center;gap:22px;
+  flex-wrap:wrap;margin-top:25px;font-size:14px;
+}
+footer{padding:25px 0;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){
+ .nav-links{gap:12px}
+ .nav-links a{font-size:11px}
+ .grid2,.skills-grid{grid-template-columns:1fr 1fr}
+ .certs{grid-template-columns:1fr 1fr}
+}
+@media(max-width:580px){
+ .nav-inner{flex-direction:column;align-items:flex-start;padding:13px 0}
+ .nav-links{width:100%;justify-content:space-between;gap:5px}
+ .nav-links a{font-size:10px}
+ .hero{min-height:520px;padding:70px 0}
+ section{padding:60px 0}
+ .grid2,.skills-grid,.project-grid,.education-grid,.certs{grid-template-columns:1fr}
+ .section-heading h2{font-size:29px}
+ .contact-box h2{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+ <div class="container nav-inner">
+  <a href="#home" class="logo">ANUSHA<span class="gradient">.AI</span></a>
+  <ul class="nav-links">
+   <li><a href="#about">About</a></li>
+   <li><a href="#skills">Skills</a></li>
+   <li><a href="#projects">Projects</a></li>
+   <li><a href="#experience">Experience</a></li>
+   <li><a href="#education">Education</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul>
+ </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+ <div class="container">
+  <div class="eyebrow">Data Scientist | Machine Learning | AI Engineering</div>
+  <h1>Hi, I'm Anusha<br><span class="gradient">Shaik.</span></h1>
+  <p>
+   Data Scientist with 2.7 years of professional experience at HCLTech,
+   building, evaluating and deploying machine learning models.
+   Passionate about creating reliable, scalable and reproducible
+   AI solutions using Python, Deep Learning and MLOps.
+  </p>
+  <div class="actions">
+   <a href="#projects" class="btn primary">Explore My Projects ↗</a>
+   <a href="#contact" class="btn">Contact Me</a>
+   <a href="mailto:anushashaiksoftware@gmail.com?subject=Portfolio%20CV%20Request" class="btn">Request CV</a>
+  </div>
+  <div class="quick-info">
+   <span>📍 Leicester, United Kingdom</span>
+   <span>🎓 MSc Student</span>
+   <span>💼 2.7 Years Experience</span>
+   <span>🤖 AI / ML Engineering</span>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="section-heading">
+   <div class="eyebrow">Who I am</div>
+   <h2>About Me</h2>
+   <p>Combining professional data science experience with advanced business education.</p>
+  </div>
+  <div class="grid2">
+   <div class="card">
+    <h3>Turning data into intelligent solutions.</h3>
+    <p class="muted">
+     I am a Data Scientist with 2.7 years of experience at HCLTech,
+     specialising in machine learning development, model evaluation,
+     data pipelines and cloud deployment.
+     <br><br>
+     My technical experience includes Python, PyTorch, TensorFlow,
+     Scikit-learn, SQL, MLflow, Docker, AWS and Azure.
+     <br><br>
+     I am currently completing an MSc in Global Business Management
+     at the University of Roehampton. I hold a Master of Computer
+     Applications and a Bachelor's degree in Computer Science.
+     <br><br>
+     I am seeking Machine Learning and AI Engineering internship
+     opportunities where I can contribute to reliable training,
+     evaluation and inference systems.
+    </p>
+   </div>
+   <div class="stats">
+    <div class="stat"><strong>2.7</strong><span>Years of professional experience</span></div>
+    <div class="stat"><strong>3</strong><span>University qualifications</span></div>
+    <div class="stat"><strong>ML</strong><span>Machine learning specialisation</span></div>
+    <div class="stat"><strong>MLOps</strong><span>Model lifecycle experience</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="container">
+  <div class="section-heading">
+   <div class="eyebrow">Technical expertise</div>
+   <h2>My Skills</h2>
+   <p>Technologies and tools I have worked with.</p>
+  </div>
+  <div class="skills-grid">
+   <div class="skill-card">
+    <h3>Programming & Engineering</h3>
+    <p>Python, SQL, Bash, Git, GitHub, Linux, CI/CD</p>
+   </div>
+   <div class="skill-card">
+    <h3>Machine Learning & MLOps</h3>
+    <p>PyTorch, TensorFlow, Keras, Scikit-learn, NLP, MLflow, Model Evaluation, Feature Engineering, Model Monitoring</p>
+   </div>
+   <div class="skill-card">
+    <h3>Cloud & Deployment</h3>
+    <p>AWS, Azure, Docker, Kubernetes, ETL Pipelines, SQL Databases, Data Warehousing, Hadoop</p>
+   </div>
+   <div class="skill-card">
+    <h3>Data Science & Statistics</h3>
+    <p>NumPy, Pandas, SciPy, Statistical Modelling, Predictive Analytics, Data Mining, EDA</p>
+   </div>
+   <div class="skill-card">
+    <h3>Visualisation & Reporting</h3>
+    <p>Power BI, Tableau, Excel, Matplotlib, Seaborn, Plotly</p>
+   </div>
+   <div class="skill-card">
+    <h3>Professional Skills</h3>
+    <p>Problem-solving, Analytical Thinking, Collaboration, Attention to Correctness, Stakeholder Communication</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="container">
+  <div class="section-heading">
+   <div class="eyebrow">My work</div>
+   <h2>Featured Projects</h2>
+   <p>Practical applications of machine learning, analytics and NLP.</p>
+  </div>
+  <div class="project-grid">
+   <article class="project">
+    <div class="project-banner">🚗</div>
+    <div class="project-body">
+     <h3>Predictive Maintenance System for Vehicle Health Monitoring</h3>
+     <p>
+      Developed machine learning models using vehicle sensor and
+      maintenance data to predict potential component failures.
+      Built preprocessing and feature engineering workflows,
+      evaluated models on held-out data and created dashboards
+      to support preventive maintenance decisions.
+     </p>
+     <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Scikit-learn</span>
+      <span class="tag">AWS</span>
+     </div>
+     <p><strong>Focus:</strong> Predictive modelling and vehicle health analytics.</p>
+    </div>
+   </article>
+
+   <article class="project">
+    <div class="project-banner">💬</div>
+    <div class="project-body">
+     <h3>Customer Feedback Sentiment Analysis using NLP</h3>
+     <p>
+      Developed an NLP-based solution to analyse customer feedback,
+      reviews and complaints. Applied text preprocessing and
+      machine learning algorithms to classify sentiment,
+      evaluated model performance and presented insights
+      through Power BI dashboards.
+     </p>
+     <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">NLP</span>
+      <span class="tag">NLTK</span>
+      <span class="tag">Scikit-learn</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Power BI</span>
+     </div>
+     <p><strong>Focus:</strong> Text classification and customer insights.</p>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="container">
+  <div class="section-heading">
+   <div class="eyebrow">Professional journey</div>
+   <h2>Work Experience</h2>
+  </div>
+  <div class="card">
+   <div class="timeline">
+    <div class="timeline-item">
+     <h3>Data Science & AI | HCLTech</h3>
+     <div class="date">February 2022 – September 2024</div>
+     <p>Professional experience in machine learning, data engineering and cloud-based model deployment.</p>
+     <ul>
+      <li>Built and maintained Python and SQL data pipelines, from extraction and transformation through model training and inference.</li>
+      <li>Developed and optimised predictive models using Scikit-learn, TensorFlow and PyTorch for classification, forecasting and automation.</li>
+      <li>Tracked experiments and versioned models using MLflow, supporting monitoring, retraining and model tuning.</li>
+      <li>Deployed and managed ML models and data processing workflows on AWS and Azure using Docker and Git.</li>
+      <li>Performed EDA, statistical analysis, data preprocessing and feature engineering to improve data quality and model performance.</li>
+      <li>Used SQL to extract, validate and manipulate data across database platforms.</li>
+      <li>Developed Power BI and Tableau dashboards to communicate business performance and analytical insights.</li>
+      <li>Collaborated with engineering, product and business teams to implement data-driven solutions and present technical recommendations.</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="education">
+ <div class="container">
+  <div class="section-heading">
+   <div class="eyebrow">Academic background</div>
+   <h2>Education</h2>
+  </div>
+  <div class="education-grid">
+   <div class="edu-card">
+    <h3>MSc Global Business Management</h3>
+    <p class="edu-date">November 2025 – Present</p>
+    <p>University of Roehampton, UK</p>
+    <p style="margin-top:12px">Relevant modules:</p>
+    <p>Digital Leadership and Data Intelligence: Optimising AI and Analytics; Global Strategic Management; Global Trade and Operations; Supply Chain and Sustainability; Capstone Live Project.</p>
+   </div>
+   <div class="edu-card">
+    <h3>Master of Computer Applications (MCA)</h3>
+    <p class="edu-date">November 2020 – August 2022</p>
+    <p>Jawaharlal Nehru Technological University</p>
+   </div>
+   <div class="edu-card">
+    <h3>Bachelor of Computer Science</h3>
+    <p class="edu-date">July 2017 – July 2020</p>
+    <p>Acharya Nagarjuna University</p>
+   </div>
+   <div class="edu-card">
+    <h3>Academic Live Project</h3>
+    <p class="edu-date">University of Roehampton</p>
+    <p>Evaluation of recruitment and employment sections of the Roehampton Club website and employer brand enhancement.</p>
+    <p style="margin-top:10px">Research, root-cause analysis, KPI development, recommendations and implementation planning.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="certifications">
+ <div class="container">
+  <div class="section-heading">
+   <div class="eyebrow">Continuous learning</div>
+   <h2>Certifications</h2>
+  </div>
+  <div class="certs">
+   <div class="cert">
+    <h3>Python Programming Comprehensive Bootcamp</h3>
+    <p>Udemy · September 2021</p>
+   </div>
+   <div class="cert">
+    <h3>Power BI Essential Training</h3>
+    <p>LinkedIn Learning · June 2026</p>
+   </div>
+   <div class="cert">
+    <h3>Excel Essential Training (Microsoft 365)</h3>
+    <p>LinkedIn Learning · June 2026</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="contact-box">
+   <div class="eyebrow">Get in touch</div>
+   <h2>Let's connect and build something impactful.</h2>
+   <p>
+    I am interested in Machine Learning, Data Science and AI Engineering
+    internships, collaborative projects and opportunities to contribute
+    to real-world AI applications.
+   </p>
+   <div class="actions" style="justify-content:center">
+    <a class="btn primary" href="mailto:anushashaiksoftware@gmail.com">Email Me ↗</a>
+    <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+   </div>
+   <div class="contact-details">
+    <span>✉ anushashaiksoftware@gmail.com</span>
+    <span>📍 Leicester, UK</span>
+    <span>☎ +44 07721593562</span>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-inner">
+  <span>© 2026 Anusha Shaik. All rights reserved.</span>
+  <span>Data Science · Machine Learning · Artificial Intelligence</span>
+ </div>
+</footer>
+</body>
+</html>
